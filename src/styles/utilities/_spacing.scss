@@ -1,0 +1,26 @@
+@use "sass:string";
+
+$properties: 'padding', 'margin';
+$sizes: 'auto', 'xs', 'xs-s', 's', 's-m', 'm', 'm-l', 'l', 'l-xl', 'xl', 'xl-2xl', '2xl', '2xl-3xl', '3xl';
+$directions: 'all', 'top', 'left', 'bottom', 'right';
+
+@each $property in $properties {
+    @each $direction in $directions {
+        @each $size in $sizes {
+                $size-value: var(--space-#{$size}, 1rem); 
+                @if $size == 'auto' {
+                    $size-value: auto
+                }
+                @if $direction != "all" {
+                    .#{string.slice($property, 1, 1) + string.slice($direction, 1, 1)}-#{$size} {
+                        #{$property}-#{$direction}: $size-value;
+                    }
+                }
+                @else {
+                    .#{string.slice($property, 1, 1)+ -#{$size}} {
+                        #{$property}: $size-value;
+                    }
+                }
+        }
+    }
+}

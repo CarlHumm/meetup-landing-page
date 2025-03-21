@@ -1,0 +1,46 @@
+footer {
+    background: 
+    linear-gradient(var(--blue-600), var(--blue-600)), 
+    url("/assets/mobile/image-footer.webp") no-repeat center;
+    background-size: cover;
+    min-height:19.5rem;
+    .wrapper {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        color: white;
+    }
+    h2 {
+        color: inherit;
+        max-width: 18ch;
+    }
+
+    p {
+        max-width: 29ch;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    footer {
+        background: 
+        linear-gradient(var(--blue-600), var(--blue-600)), 
+        url("/assets/tablet/image-footer.webp") no-repeat center;
+        background-size: cover;
+        .wrapper {
+            text-align: start;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1100px) {
+    footer {
+        background: 
+        linear-gradient(var(--blue-600), var(--blue-600)), 
+        url("/assets/desktop/image-footer.webp") no-repeat center;
+        background-size: cover;
+    }
+}

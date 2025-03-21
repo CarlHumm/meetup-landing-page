@@ -1,0 +1,40 @@
+@use '../variables' as *;
+
+
+.btn-secondary {
+background: var(--purple-600);
+color: var(--white);
+flex-shrink: 0;
+
+&:hover, &:focus-visible {
+    background: var(--purple-300);
+    .version {
+        color: inherit;
+    }
+}
+
+.version {
+    color: var(--purple-300);
+}
+}
+
+.btn-primary {
+background: var(--blue-600);
+color: var(--white);
+&:hover, &:focus-visible {
+    background: #71C0D4;
+    .version {
+        color: var(--blue-300);
+    }
+}
+.version {
+    color: var(--blue-300);
+}
+}
+
+.button-group {
+    display: flex;
+    flex-wrap:wrap;
+    gap: 1rem;
+    justify-content:center;
+}

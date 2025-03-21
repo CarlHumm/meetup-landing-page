@@ -1,0 +1,94 @@
+// Generic
+@use './reset';
+@use './fonts';
+@use './mixins';
+@use './variables';
+
+// Components
+@use './components/site-header';
+@use './components/site-footer';
+@use './components/hero';
+@use './components/avatar';
+@use './components/button';
+@use './components/indicator';
+
+// Utilities
+@use './utilities/spacing';
+@use './utilities/center';
+@use './utilities/region';
+@use './utilities/flow';
+@use './utilities/grid';
+
+
+ul {
+    padding-left: 0;
+}
+svg {
+    width: 100%;
+}
+
+h1, h2, h3, h4 {
+    line-height: 1.1;
+    font-weight: black;
+    color: var(--slate-900);
+}
+
+h1 {
+    font-size: var(--heading-0);
+    max-width:14ch;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: var(--heading--2);
+    font-weight: 900;
+}
+
+p, li, span, small, a {
+    max-width: 60ch;
+}
+
+body {
+    font-size: var(--base-0);
+    font-family: var(--font-base-family);
+    background: var(--white);
+    color: var(--slate-600);
+}
+
+.subtext {
+    color: var(--blue-600);
+    letter-spacing: 4px;
+    font-size: 1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+button {
+    font-weight: 900;
+    font-size: 1rem;
+    border-radius: 29px;
+    padding: 16px 40px;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    transition:0.25s ease-in-out;
+}
+
+
+.py-0 {
+    padding-block-start: 0;
+}
+
+
+[data-reveal="true"] {
+
+    > * {
+        --clip: "0% 0%, 0% 100%, 0% 100%, 0% 0%";
+        clip-path: polygon(var(--clip));
+        border-radius:8px;
+        overflow: hidden;
+        opacity: 0;
+        transform-origin:0%;
+    }
+  }
+  
